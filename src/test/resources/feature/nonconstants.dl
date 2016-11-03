@@ -1,0 +1,3 @@
+(a,b,c) : variable(a, b, c);
+(b) : set(b, {(a) : p(a,'b')});
+(d) : d == max{(a) : p(a,'b')};

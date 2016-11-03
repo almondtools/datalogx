@@ -1,0 +1,25 @@
+fact(a,b,c); //fact;
+
+join(a,c) : r(a,b) & s(b,c); //intersection
+
+union(a,b) : r(a,b) | s(a,b); //union
+
+diff(a,b) : r(a,b) & ~s(b,c); //difference
+
+(a) : r(a,b); //projection
+
+result(a) : r(a,b) & s(_, b); // existential wildcard
+result(a) : r(a,b) & ~s(*, b); // negative existential wildcard
+
+result(a) : r(a,b) & s(b) | s(a); // complex rule body
+
+result(a) : r(a,b) & s(b) & a == b | s(a); // with operator
+result(a) : r(a,b) & s(b) & a <= b | s(a); // with operator
+
+r(a) & r(b) : s(a,b);  // complex rule head
+
+//constants
+string('a','\n','\\n');
+long(123,-1,0);
+double(123.1,-0.000021,13000000000000000000000000000000.6);
+boolean(true, false);

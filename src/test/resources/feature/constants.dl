@@ -1,0 +1,7 @@
+string('a','\n','\\n');
+int(123,-1,0);
+decimal(123.1,0.0000021,1360000000.0);
+boolean(true, false);
+function(f('b',3.0));
+set(d, {'a',2});
+list(d, ['a',2]);
