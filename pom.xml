@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>com.github.almondtools</groupId>
 			<artifactId>conmatch</artifactId>
-			<version>0.1.9</version>
+			<version>0.1.10</version>
 			<scope>test</scope>
 		</dependency>
 
