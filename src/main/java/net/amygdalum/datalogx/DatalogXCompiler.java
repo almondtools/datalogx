@@ -4,9 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.antlr.v4.runtime.ANTLRFileStream;
-import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 
 import net.amygdalum.datalogx.DatalogXParser.ProgramContext;
@@ -18,11 +17,11 @@ public class DatalogXCompiler extends DatalogXStatementCompiler {
 
 
 	public DatalogXCompiler(String code) {
-		this(new ANTLRInputStream(code));
+		this(CharStreams.fromString(code));
 	}
 
 	public DatalogXCompiler(File file) throws IOException {
-		this(new ANTLRFileStream(file.getPath()));
+		this(CharStreams.fromFileName(file.getPath()));
 	}
 
 	public DatalogXCompiler(CharStream input) {
