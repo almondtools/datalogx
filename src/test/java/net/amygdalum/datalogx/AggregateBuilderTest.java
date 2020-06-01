@@ -25,7 +25,7 @@ public class AggregateBuilderTest {
 		AggregateBuilder a = new AggregateBuilder("f", new Query(
 			new AnonymousLiteral(var("a")),
 			new PositiveLiteral("p", var("a"), str("b"))));
-		assertThat(a.toString(), equalTo("f{(a) : p(a,'b')}"));
+		assertThat(a.toString(), equalTo("f{(a) <- p(a,'b')}"));
 	}
 
 	@Test

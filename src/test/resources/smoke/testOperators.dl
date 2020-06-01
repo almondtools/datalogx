@@ -1,16 +1,16 @@
 + fact(a,b,c); //fact;
 - fact(a,b,c); //fact;
 
-+ join(a,c) : r(a,b) & s(b,c); //intersection
-- join(a,c) : r(a,b) & s(b,c); //intersection
++ join(a,c) <- r(a,b) & s(b,c); //intersection
+- join(a,c) <- r(a,b) & s(b,c); //intersection
 
-+ union(a,b) : r(a,b) | s(a,b); //union
++ union(a,b) <- r(a,b) | s(a,b); //union
 
-+ diff(a,b) : r(a,b) & ~s(b,c); //difference
++ diff(a,b) <- r(a,b) & ~s(b,c); //difference
 
-? (a) : r(a,b); //projection
+? (a) <- r(a,b); //projection
 
 
-+ result(a) : r(a,b) & s(b) | s(a); // complex rule body
++ result(a) <- r(a,b) & s(b) | s(a); // complex rule body
 
-+ r(a) & r(b) : s(a,b);  // complex rule head
++ r(a) & r(b) <- s(a,b);  // complex rule head

@@ -40,7 +40,7 @@ public class AssertTest {
 
 	@Test
 	public void testAddRule() throws Exception {
-		DatalogXParser parser = createParserFor("+ p(a,b) : r(a,c) & ~s(c,b);");
+		DatalogXParser parser = createParserFor("+ p(a,b) <- r(a,c) & ~s(c,b);");
 		Assert statement = (Assert) parser.add().accept(new DatalogXStatementCompiler());
 		assertThat(statement.getClause(), instanceOf(Rule.class));
 		assertThat(((Rule) statement.getClause()).getHead(), equalTo(new PositiveLiteral("p", var("a"), var("b"))));
@@ -49,7 +49,7 @@ public class AssertTest {
 			.and(new NegativeLiteral("s", var("c"), var("b")))
 			.build()));
 
-		parser = createParserFor("p(a,b) : r(a,c) & ~s(c,b);");
+		parser = createParserFor("p(a,b) <- r(a,c) & ~s(c,b);");
 		Assert statement2 = (Assert) parser.add().accept(new DatalogXStatementCompiler());
 		assertThat(statement2, equalTo(statement));
 	}

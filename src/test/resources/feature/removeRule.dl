@@ -1,1 +1,1 @@
-- result(a) : r(a,b) & s(b) | s(a);
+- result(a) <- r(a,b) & s(b) | s(a);

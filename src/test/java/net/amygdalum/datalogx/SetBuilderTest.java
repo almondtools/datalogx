@@ -23,10 +23,10 @@ public class SetBuilderTest {
 
 	@Test
 	public void testSetBuilder() throws Exception {
-		DatalogXParser parser = createParserFor("(X,Y) : p(X,Y)");
+		DatalogXParser parser = createParserFor("(X,Y) <- p(X,Y)");
 		Query query = (Query) parser.query().accept(new DatalogXStatementCompiler());
 		SetBuilder a = new SetBuilder(query);
-		assertThat(a.toString(), equalTo("{(X,Y) : p(X,Y)}"));
+		assertThat(a.toString(), equalTo("{(X,Y) <- p(X,Y)}"));
 	}
 
 	@Test

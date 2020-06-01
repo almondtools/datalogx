@@ -28,7 +28,7 @@ request
 	;
 	
 idbrule
-	: head ':' body 
+	: head '<-' body 
 	;
 
 edbfact
@@ -36,7 +36,7 @@ edbfact
 	;
 	
 query
-	: queryhead ':' body
+	: queryhead '<-' body
 	;
 	
 head

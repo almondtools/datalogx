@@ -37,7 +37,7 @@ public class Query implements Clause, Statement {
 	public String toString() {
 		return new StringBuilder()
 			.append(head.toString())
-			.append(" : ")
+			.append(" <- ")
 			.append(body.toString())
 			.toString();
 	}

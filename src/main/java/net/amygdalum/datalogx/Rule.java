@@ -28,7 +28,7 @@ public class Rule implements Clause {
 	public String toString() {
 		return new StringBuilder()
 			.append(head.toString())
-			.append(" : ")
+			.append(" <- ")
 			.append(body.toString())
 			.toString();
 	}

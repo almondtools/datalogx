@@ -37,7 +37,7 @@ public class RetractTest {
 
 	@Test
 	public void testAddRule() throws Exception {
-		DatalogXParser parser = createParserFor("- p(a,b) : r(a,c) & s(c,b) & a == b;");
+		DatalogXParser parser = createParserFor("- p(a,b) <- r(a,c) & s(c,b) & a == b;");
 		Retract statement = (Retract) parser.remove().accept(new DatalogXStatementCompiler());
 		assertThat(statement.getClause(), instanceOf(Rule.class));
 		assertThat(((Rule) statement.getClause()).getHead(), equalTo(new PositiveLiteral("p",var("a"),var("b"))));
