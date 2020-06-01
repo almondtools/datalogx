@@ -72,30 +72,30 @@ A good sample for a changing database is the ancestry of the elven characters in
 ### Facts
 
 ```prolog
-son("Fingon", "Fingolfin").
-son("Argon", "Fingolfin").
-son("Orodreth", "Fingon").
-son("Gil-Galad", "Orodreth").
+son("Fingon", "Fingolfin");
+son("Argon", "Fingolfin");
+son("Orodreth", "Fingon");
+son("Gil-Galad", "Orodreth");
 ```
 
 ### Rules
 
 ```prolog
-forefather(F,S) <- son(S,F).
-forefather(F,S) <- forefather(F,T) & son(S,T).
+forefather(F,S) <- son(S,F);
+forefather(F,S) <- forefather(F,T) & son(S,T);
 ```
 
 ### Query
 
 ```prolog
-?(F) : forefather(F,"Gil-Galad");
+?(F) <- forefather(F,"Gil-Galad");
 ```
 
 ### Add/Remove
 
 ```prolog
-- son("Orodreth", "Fingon"). // according to later sources
-+ son("Orodreth", "Argon"). // according to later sources
+- son("Orodreth", "Fingon"); // according to later sources
++ son("Orodreth", "Argon"); // according to later sources
 ```
 
 
