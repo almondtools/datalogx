@@ -4,8 +4,6 @@ import static net.amygdalum.datalogx.CompilerTests.createCompiler;
 
 import org.junit.Test;
 
-import net.amygdalum.datalogx.DatalogXCompiler;
-
 public class DatalogXCompilerSmokeTest {
 
 	@Test

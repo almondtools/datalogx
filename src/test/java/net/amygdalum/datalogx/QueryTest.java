@@ -3,12 +3,9 @@ package net.amygdalum.datalogx;
 import static net.amygdalum.datalogx.CompilerTests.createParserFor;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
-
-import net.amygdalum.datalogx.DatalogXStatementCompiler;
-import net.amygdalum.datalogx.Query;
 
 
 public class QueryTest {

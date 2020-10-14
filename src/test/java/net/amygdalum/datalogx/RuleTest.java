@@ -1,21 +1,12 @@
 package net.amygdalum.datalogx;
 
-import static net.amygdalum.datalogx.Variable.var;
 import static net.amygdalum.datalogx.CompilerTests.createParserFor;
+import static net.amygdalum.datalogx.Variable.var;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
-import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
-
-import net.amygdalum.datalogx.Conjunction;
-import net.amygdalum.datalogx.DatalogXStatementCompiler;
-import net.amygdalum.datalogx.Disjunction;
-import net.amygdalum.datalogx.NegativeLiteral;
-import net.amygdalum.datalogx.OperatorLiteral;
-import net.amygdalum.datalogx.PositiveLiteral;
-import net.amygdalum.datalogx.Rule;
-import net.amygdalum.datalogx.SemanticAnalysisException;
 
 public class RuleTest {
 

@@ -4,12 +4,6 @@ import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
-import net.amygdalum.datalogx.Assert;
-import net.amygdalum.datalogx.Fact;
-import net.amygdalum.datalogx.Retract;
-import net.amygdalum.datalogx.Rule;
-import net.amygdalum.datalogx.Statement;
-
 public final class CompilerMatchers {
 
 	private CompilerMatchers() {

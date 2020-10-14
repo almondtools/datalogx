@@ -1,14 +1,11 @@
 package net.amygdalum.datalogx;
 
-import static net.amygdalum.datalogx.Variable.var;
 import static net.amygdalum.datalogx.CompilerTests.createParserFor;
+import static net.amygdalum.datalogx.Variable.var;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
-
-import net.amygdalum.datalogx.AnonymousLiteral;
-import net.amygdalum.datalogx.DatalogXStatementCompiler;
 
 public class AnonymousLiteralTest {
 

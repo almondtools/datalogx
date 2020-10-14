@@ -1,23 +1,15 @@
 package net.amygdalum.datalogx;
 
-import static net.amygdalum.datalogx.StringConstant.str;
-import static net.amygdalum.datalogx.Variable.var;
 import static net.amygdalum.datalogx.CompilerTests.createCompiler;
 import static net.amygdalum.datalogx.CompilerTests.createParserFor;
+import static net.amygdalum.datalogx.StringConstant.str;
+import static net.amygdalum.datalogx.Variable.var;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 
 import org.junit.Test;
-
-import net.amygdalum.datalogx.AnonymousLiteral;
-import net.amygdalum.datalogx.DatalogXCompiler;
-import net.amygdalum.datalogx.DatalogXStatementCompiler;
-import net.amygdalum.datalogx.PositiveLiteral;
-import net.amygdalum.datalogx.Query;
-import net.amygdalum.datalogx.SetBuilder;
-import net.amygdalum.datalogx.Statement;
 
 public class SetBuilderTest {
 

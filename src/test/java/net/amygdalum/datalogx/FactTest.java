@@ -1,24 +1,15 @@
 package net.amygdalum.datalogx;
 
-import static net.amygdalum.datalogx.Variable.var;
 import static net.amygdalum.datalogx.CompilerTests.createParserFor;
+import static net.amygdalum.datalogx.Variable.var;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import net.amygdalum.datalogx.AtomicFormula;
-import net.amygdalum.datalogx.Conjunction;
-import net.amygdalum.datalogx.DatalogXStatementCompiler;
-import net.amygdalum.datalogx.Disjunction;
-import net.amygdalum.datalogx.Fact;
-import net.amygdalum.datalogx.NegativeLiteral;
-import net.amygdalum.datalogx.PositiveLiteral;
-import net.amygdalum.datalogx.SemanticAnalysisException;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FactTest {
